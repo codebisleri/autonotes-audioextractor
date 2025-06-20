@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoNotes 🎙️📝</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            font-family: 'Arial', sans-serif;
+            padding: 40px 0;
+        }
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: auto;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 36px;
+            font-weight: 600;
+        }
+        .btn-custom {
+            background-color: #3498db;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #2980b9;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-top: 10px;
+        }
+        .row > .col-md-6 {
+            margin-bottom: 20px;
+        }
+        .card {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <div class="box">
+            <h1>🎙️ AutoNotes</h1>
+            <form method="POST" enctype="multipart/form-data" class="mb-4">
+                <div class="mb-3">
+                    <label for="audio-file" class="form-label">Select an audio file (.mp3 or .wav):</label>
+                    <input type="file" name="audio" id="audio-file" class="form-control" required><br><br>
+                    <label for="language" class="form-label">Select Audio's Language:</label>
+                    <select name="language" id="language-select" class="form-select" required>
+                        <option value="en-US">English (US)</option>
+                        <option value="hi-IN">Hindi</option>
+                        <option value="es-ES">Spanish</option>
+                        <option value="fr-FR">French</option>
+                        <option value="hi">Hindi</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="ta">Tamil</option>
+                        <option value="de">German</option>
+                        <option value="te">Telugu</option>
+                        <option value="kn">Kannada</option>
+                        <option value="ml">Malayalam</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-custom w-100">Transcribe & Summarize</button>
+            </form>
+
+            {% if transcript %}
+                <h2 class="mt-4">📝 Transcript:</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Original Transcript:</h4>
+                        <textarea readonly>{{ transcript }}</textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Translated Transcript:</h4>
+                        <textarea id="translated-transcript" readonly>{{ translated_transcript }}</textarea>
+                    </div>
+                </div>
+                <h2 class="mt-4">✨ Summary:</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Original Summary:</h4>
+                        <textarea readonly>{{ summary }}</textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Translated Summary:</h4>
+                        <textarea id="translated-summary" readonly>{{ translated_summary }}</textarea>
+                    </div>
+                </div>
+                <div id="translation-section">
+                    <form id="translate-form" class="mt-4">
+                        <input type="hidden" name="transcript" value="{{ transcript }}">
+                        <input type="hidden" name="summary" value="{{ summary }}">
+                        <label for="language">Translate to:</label>
+                        <select name="language" id="language-select-translate" class="form-select mb-3" required>
+                            <option value="hi">Hindi</option>
+                            <option value="es">Spanish</option>
+                            <option value="fr">French</option>
+                            <option value="ta">Tamil</option>
+                            <option value="de">German</option>
+                            <option value="te">Telugu</option>
+                            <option value="kn">Kannada</option>
+                            <option value="ml">Malayalam</option>
+                        </select>
+                        <button type="button" class="btn btn-info w-100" id="translate-btn">🌐 Translate</button>
+                    </form>
+                </div>
+                <form action="/download" method="post" class="mt-4">
+                    <input type="hidden" name="transcript" value="{{ transcript }}">
+                    <input type="hidden" name="summary" value="{{ summary }}">
+                    <button type="submit" class="btn btn-success w-100">⬇️ Download Summary as PDF</button>
+                </form>
+            {% endif %}
+        </div>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('index') }}" class="btn back-btn">⬅ Back to Home</a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('translate-btn').addEventListener('click', function() {
+            const language = document.getElementById('language-select-translate').value; // Corrected ID.
+            const transcript = '{{ transcript }}';
+            const summary = '{{ summary }}';
+
+            fetch('/translate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    transcript: transcript,
+                    summary: summary,
+                    language: language
+                })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok: ' + response.status);
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('translated-transcript').value = data.translated_transcript;
+                document.getElementById('translated-summary').value = data.translated_summary;
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+                alert('Translation failed! Please check the console for details.');
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
