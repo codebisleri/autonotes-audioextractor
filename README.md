@@ -79,11 +79,11 @@ Visit `http://localhost:5000` in your browser.
 
 ## 📸 Screenshots
 
-### Home Page
-![Home](screenshots/Home.png)
-
 ### Login Page
 ![Login](screenshots/Login.png)
+
+### Home Page
+![Home](screenshots/Home.png)
 
 ### AutoNotes Interface
 ![Autonotes](screenshots/Autonotes.png)
