@@ -89,13 +89,13 @@ Visit `http://localhost:5000` in your browser.
 ![Autonotes](screenshots/Autonotes.png)
 
 ### AutoNotes Output
-![Autonotes Output](screenshots/Autonotes output.png)
+![Autonotes Output](screenshots/Autonotes_output.png)
 
 ### Audio Extractor Interface
 ![Audio Extractor](screenshots/Audioextractor.png)
 
 ### Audio Extractor Output
-![Audio Extractor Output](screenshots/Audioextractor output.png)
+![Audio Extractor Output](screenshots/Audioextractor_output.png)
 
 
 ---
