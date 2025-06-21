@@ -1,44 +1,121 @@
-# autonotes-audioextractor
+# 📝 AutoNotes & Audio Extractor
 
-AutoNotes is a smart AI-powered web application that:
-- Transcribes speech from **audio or video files**
-- Extracts **audio from videos**
-- Generates **summarized notes**
-- Supports **multi-language translation** (optional)
-  
+AutoNotes & Audio Extractor is an AI-powered web app to transcribe voice/audio, extract audio from video, summarize the content, and translate it into multiple languages. It’s perfect for students, creators, and professionals.
+---
+## 🚀 Features
+
+- 🎙️ **Audio Transcription** – Upload audio and get accurate transcriptions using OpenAI Whisper.
+- 📄 **Automatic Summarization** – Generate concise summaries from long transcripts.
+- 🌐 **Multi-language Translation** – Translate transcripts and summaries into different languages.
+- 🎞️ **Audio from Video** – Extract audio from uploaded video files.
+- 🔐 **User Login System** – Secure login and personalized dashboard.
+- 📁 **My Notes Page** – Logged-in users can view their past uploads.
 ---
 
-## 🔧 Features
+## 🛠️ Tech Stack
 
-- 🎤 **Audio & Video Transcription** using OpenAI's Whisper
-- ✂️ **Audio Extraction** from video files (e.g., MP4, MOV)
-- 📝 **Automatic Note Summarization** with HuggingFace Transformers
-- 🌐 **Multi-language Translation** using Deep Translator
-- 📄 Export to PDF
-- 🧠 WordCloud from transcripts
-- 🔐 User registration, login, and transcript history
+- **Backend:** Python (Flask)
+- **Frontend:** HTML, CSS, Bootstrap
+- **AI Models:** OpenAI Whisper, HuggingFace Transformers
+- **Translation:** deep-translator (free and offline-compatible)
+- **Database:** SQLite
+- **Authentication:** Flask-Login
+- **Media Processing:** ffmpeg
 
 ---
 
-## 🚀 How to Run Locally
+## 📂 Project Structure
+Autonotes&Audioextractor/
+│
+├── static/
+│ └── css, js, uploads
+├── templates/
+│ └── base.html, login.html, dashboard.html, transcriber.html, ...
+├── venv/
+├── instance/
+│ └── database.sqlite3
+├── app.py
+├── requirements.txt
+└── README.md
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/codebisleri/autonotesgenerator.git
-cd autonotesgenerator
+git clone https://github.com/codebisleri/autonotes-audioextractor.git
+cd autonotes-audioextractor
+```
 
-# Create virtual environment
+### 2. Create and Activate Virtual Environment
+
+```bash
 python -m venv venv
-venv\Scripts\activate      # On Windows
-# Or use: source venv/bin/activate (on Mac/Linux)
+venv\Scripts\activate        # On Windows
+# or
+source venv/bin/activate       # On Mac/Linux
+```
 
-# Install dependencies
+### 3. Install Requirements
+
+```bash
 pip install -r requirements.txt
+```
 
-# Set up environment variables
-cp .env.example .env       # Or create your own .env file
-# Make sure it includes a SECRET_KEY
+### 4. Run the App
 
-# Run the app
+```bash
 python app.py
+```
 
-Then open your browser at: http://localhost:5000
+Visit `http://localhost:5000` in your browser.
+
+---
+## 📸 Screenshots
+## 📸 Screenshots
+
+### 🔐 Login Page
+![Login]("screenshots/Login.png")
+
+### 🏠 Home Page
+![Home]("screenshots/Home.png")
+
+### 📝 AutoNotes Page
+![AutoNotes]("screenshots/Autonotes.png")
+
+### 📝 AutoNotes Output
+![AutoNotes Output]("screenshots/Autonotes output.png")
+
+### 🎧 Audio Extractor Page
+![Audio Extractor]("screenshots/Audioextractor.png")
+
+### 🎧 Audio Extractor Output
+![Audio Extractor Output]("screenshots/Audioextractor output.png")
+
+---
+
+## 🔮 Future Enhancements
+
+- 🎤 Live microphone transcription
+- 📄 Export notes to PDF
+- ☁️ Upload from Google Drive
+- 🌐 Real-time translation switch
+
+--- 
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repo
+2. Create a new branch
+3. Make changes and commit
+4. Open a Pull Request
+
+---
+
+## 🛡️ License
+
+MIT License © 2025 [Tanmaye Bisleri](https://github.com/codebisleri)
