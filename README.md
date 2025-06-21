@@ -1,4 +1,4 @@
-# 📝 AutoNotes & Audio Extractor
+# 📝 Auto Notes & Audio Extractor
 
 AutoNotes & Audio Extractor is an AI-powered web app to transcribe voice/audio, extract audio from video, summarize the content, and translate it into multiple languages. It’s perfect for students, creators, and professionals.
 
