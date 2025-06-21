@@ -1,15 +1,19 @@
 # 📝 AutoNotes & Audio Extractor
 
 AutoNotes & Audio Extractor is an AI-powered web app to transcribe voice/audio, extract audio from video, summarize the content, and translate it into multiple languages. It’s perfect for students, creators, and professionals.
+
 ---
+
 ## 🚀 Features
 
-- 🎙️ **Audio Transcription** – Upload audio and get accurate transcriptions using OpenAI Whisper.
-- 📄 **Automatic Summarization** – Generate concise summaries from long transcripts.
-- 🌐 **Multi-language Translation** – Translate transcripts and summaries into different languages.
-- 🎞️ **Audio from Video** – Extract audio from uploaded video files.
 - 🔐 **User Login System** – Secure login and personalized dashboard.
 - 📁 **My Notes Page** – Logged-in users can view their past uploads.
+- 🎙️ **Audio Transcription** – Upload audio and get accurate transcriptions using OpenAI Whisper.
+- 🎞️ **Audio from Video** – Extract audio from uploaded video files.
+- 📄 **Automatic Summarization** – Generate concise summaries from long transcripts.
+- 🌐 **Multi-language Translation** – Translate transcripts and summaries into different languages.
+- 📤 Export as PDF – Download transcriptions and summaries as PDF files.
+  
 ---
 
 ## 🛠️ Tech Stack
@@ -25,6 +29,7 @@ AutoNotes & Audio Extractor is an AI-powered web app to transcribe voice/audio, 
 ---
 
 ## 📂 Project Structure
+
 <pre>
 Autonotes&Audioextractor/
 │
@@ -41,6 +46,7 @@ Autonotes&Audioextractor/
 ├── requirements.txt
 └── README.md
 </pre>
+
 ---
 
 ## ⚙️ Setup Instructions
@@ -102,10 +108,10 @@ Visit `http://localhost:5000` in your browser.
 
 ## 🔮 Future Enhancements
 
-- 🎤 Live microphone transcription
-- 📄 Export notes to PDF
-- ☁️ Upload from Google Drive
+- 🎙️ Live microphone recording + live transcription.
+- ☁️ Support for uploading longer video/audio files (>50MB) via cloud, Google Drive...
 - 🌐 Real-time translation switch
+- 🔍 AI-powered keyword/topic extraction from transcript.
 
 --- 
 
