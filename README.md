@@ -25,6 +25,7 @@ AutoNotes & Audio Extractor is an AI-powered web app to transcribe voice/audio, 
 ---
 
 ## 📂 Project Structure
+<pre>
 Autonotes&Audioextractor/
 │
 ├── static/
@@ -36,7 +37,10 @@ Autonotes&Audioextractor/
 │ └── database.sqlite3
 ├── app.py
 ├── requirements.txt
-└── README.md
+└── README.md  
+</pre>
+<pre> Autonotes&Audioextractor/ │ ├── static/ │ └── css, js, uploads ├── templates/ │ └── base.html, login.html, dashboard.html, transcriber.html, ... ├── screenshots/ │ ├── Home.png │ ├── Login.png │ ├── Autonotes.png │ ├── Autonotes output.png │ ├── Audioextractor.png │ └── Audioextractor output.png ├── venv/ ├── instance/ │ └── database.sqlite3 ├── app.py ├── requirements.txt └── README.md </pre>
+
 
 Autonotes&Audioextractor/
 ├── static/
