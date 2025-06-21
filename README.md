@@ -38,6 +38,32 @@ Autonotes&Audioextractor/
 ├── requirements.txt
 └── README.md
 
+Autonotes&Audioextractor/
+├── static/
+│   ├── css/
+│   ├── js/
+│   └── uploads/
+├── templates/
+│   ├── base.html
+│   ├── login.html
+│   ├── dashboard.html
+│   ├── transcriber.html
+│   └── ...
+├── screenshots/
+│   ├── Home.png
+│   ├── Login.png
+│   ├── Autonotes.png
+│   ├── Autonotes output.png
+│   ├── Audioextractor.png
+│   └── Audioextractor output.png
+├── instance/
+│   └── database.sqlite3
+├── venv/
+├── app.py
+├── requirements.txt
+└── README.md
+
+
 ---
 
 ## ⚙️ Setup Instructions
