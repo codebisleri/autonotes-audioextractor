@@ -76,7 +76,7 @@ python app.py
 Visit `http://localhost:5000` in your browser.
 
 ---
-## 📸 Screenshots
+
 ## 📸 Screenshots
 
 ### 🔐 Login Page
@@ -89,13 +89,13 @@ Visit `http://localhost:5000` in your browser.
 ![AutoNotes]("screenshots/Autonotes.png")
 
 ### 📝 AutoNotes Output
-![AutoNotes Output]("screenshots/Autonotes output.png")
+![AutoNotes Output]("screenshots/Autonotes_output.png")
 
 ### 🎧 Audio Extractor Page
 ![Audio Extractor]("screenshots/Audioextractor.png")
 
 ### 🎧 Audio Extractor Output
-![Audio Extractor Output]("screenshots/Audioextractor output.png")
+![Audio Extractor Output]("screenshots/Audioextractor_output.png")
 
 ---
 
