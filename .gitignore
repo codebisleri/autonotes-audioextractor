@@ -1,18 +1,47 @@
-# Ignore Python virtual environments and cache
+# 🚫 Python environment and dependency folders
 venv/
+env/
+ENV/
+.venv/
 Lib/
 Scripts/
+
+# 🚫 Python bytecode and caches
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
+
+# 🚫 Virtualenv and packaging
+*.egg-info/
+.eggs/
+*.whl
+pip-log.txt
+
+# 🗃️ Ignore database and log files
 *.log
 *.db
 *.sqlite3
-*.env
 
-# Ignore uploads and temp files
+# 🔐 Environment variables
+.env
+.env.*
+
+# 📦 Ignore uploads and temp/project files
 uploads/
 instance/
-*.egg-info/
 .DS_Store
+*.bak
+*.tmp
+
+# 🎨 VS Code-specific
+.vscode/
+
+# 💬 Audio/ML related (optional, to reduce large files)
+*.pt
+*.pth
+*.h5
+*.ckpt
+*.onnx
+.cache/
+models/
