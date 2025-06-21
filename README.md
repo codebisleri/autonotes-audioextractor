@@ -79,23 +79,24 @@ Visit `http://localhost:5000` in your browser.
 
 ## 📸 Screenshots
 
-### 🔐 Login Page
-![Login]("screenshots/Login.png")
+### Home Page
+![Home](screenshots/Home.png)
 
-### 🏠 Home Page
-![Home]("screenshots/Home.png")
+### Login Page
+![Login](screenshots/Login.png)
 
-### 📝 AutoNotes Page
-![AutoNotes]("screenshots/Autonotes.png")
+### AutoNotes Interface
+![Autonotes](screenshots/Autonotes.png)
 
-### 📝 AutoNotes Output
-![AutoNotes Output]("screenshots/Autonotes_output.png")
+### AutoNotes Output
+![Autonotes Output](screenshots/Autonotes output.png)
 
-### 🎧 Audio Extractor Page
-![Audio Extractor]("screenshots/Audioextractor.png")
+### Audio Extractor Interface
+![Audio Extractor](screenshots/Audioextractor.png)
 
-### 🎧 Audio Extractor Output
-![Audio Extractor Output]("screenshots/Audioextractor_output.png")
+### Audio Extractor Output
+![Audio Extractor Output](screenshots/Audioextractor output.png)
+
 
 ---
 
